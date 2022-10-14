@@ -1,0 +1,19 @@
+package com.exemple;
+
+public class HolaMundo {
+    public static void main(String[] args) {
+
+        int numero = 1;
+        long numero1 = 100000;
+        double numero2 = 1.78;
+        boolean numero3 =  false;
+        String palabra = "Aprendiendo Java";
+
+        System.out.println("Entero: " + numero +
+                "\nLong: " + numero1 +
+                "\nDoble: " + numero2 +
+                "\nBoleano: " + numero3 +
+                "\nCadena: " + palabra);
+
+    }
+}

@@ -1,0 +1,15 @@
+package com.exemple;
+
+public class HolaMundo {
+    public static void main(String[] args) {
+        System.out.println("Tu precio más el IVA ES: " + precio(3000));
+
+
+    }
+    static double precio(double pre){
+            double pre1 = pre * 0.21;
+            pre =  pre + pre1;
+        return pre;
+    }
+}
+

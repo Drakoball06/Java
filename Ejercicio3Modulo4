@@ -1,0 +1,14 @@
+package com.exemple;
+
+public class HolaMundo {
+    public static void main(String[] args) {
+
+        String[] nombres = {"perro","corriendo","ladrillo","senpai"};
+        String nombreS = "";
+        for(String nombre : nombres){
+            nombreS += nombre;
+        }
+        System.out.println(nombreS);
+    }
+
+}

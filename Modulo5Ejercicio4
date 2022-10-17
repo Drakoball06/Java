@@ -1,0 +1,97 @@
+package com.exemple;
+
+public class SmartDevice {
+    public static void main(String[] args) {
+        SmartPhone smartPhone = new SmartPhone("Xiaomi Redmi Note 11 ", "Android","Si","Si","Si","13 MP","128 GB","Si","4 GB");
+
+
+        System.out.println("Nombre del celular: " + smartPhone.nombreSmartPhone +"\n"+
+                "Sistema Operativo : " + smartPhone.sistemaOperativo + "\n" +
+                "Wifi: " + smartPhone.wifi + "\n" +
+                "Bluetooth: " + smartPhone.bluetooth + "\n" +
+                "Lector de Huella: " + smartPhone.lectorHuella + "\n" +
+                "Camara frontal: " + smartPhone.camaraFrontal + "\n" +
+                "Memoria Interna: " + smartPhone.memoriaInterna + "\n" +
+                "Memoria Externa: " + smartPhone.memoriaExterna + "\n" +
+                "Memoria RAM: " + smartPhone.memoriaRAM + "\n");
+
+        System.out.println("---------------------------------------------------------------------------------------------------\n");
+        SmartWatch smartWatch = new SmartWatch("Smartwatch Apple Watch Series 7 ","Si","Si","watchOS","apróx. 18 horas",
+                "Si","Si","Negro","45 mm","32 GB");
+        System.out.println("Nombre del SmarthWatch: " + smartWatch.nombreSmartWatch + "\n" +
+                "Altavoz: " + smartWatch.altavoz + "\n" +
+                "Microfono: " + smartWatch.microfono + "\n" +
+                "Sistema Operativo: " + smartWatch.sistemaOperativo + "\n" +
+                "Duración de Batería: " + smartWatch.duracionBateria + "\n " +
+                "Bluetooth: " + smartWatch.bluetooth + "\n" +
+                "Modo Deportivo: " + smartWatch.modoDeportivo + "\n" +
+                "Color Correa: " + smartWatch.colorCorrea + "\n" +
+                "Pantalla: " + smartWatch.pantalla + "\n" +
+                "Capacidad de Almacenamiento: " + smartWatch.capacidadAlmacenamiento);
+
+    }
+}
+
+package com.exemple;
+
+public class SmartWatch {
+     String nombreSmartWatch;
+     String altavoz;
+     String microfono;
+     String sistemaOperativo;
+     String duracionBateria;
+     String bluetooth;
+     String modoDeportivo;
+     String colorCorrea;
+     String pantalla;
+     String capacidadAlmacenamiento;
+
+    public SmartWatch(){
+
+    }
+
+    public SmartWatch(String nombreSmartWatch, String altavoz, String microfono, String sistemaOperativo, String duracionBateria, String bluetooth, String modoDeportivo, String colorCorrea, String pantalla, String capacidadAlmacenamiento) {
+        this.nombreSmartWatch = nombreSmartWatch;
+        this.altavoz = altavoz;
+        this.microfono = microfono;
+        this.sistemaOperativo = sistemaOperativo;
+        this.duracionBateria = duracionBateria;
+        this.bluetooth = bluetooth;
+        this.modoDeportivo = modoDeportivo;
+        this.colorCorrea = colorCorrea;
+        this.pantalla = pantalla;
+        this.capacidadAlmacenamiento = capacidadAlmacenamiento;
+    }
+
+
+}
+
+package com.exemple;
+
+public class SmartPhone {
+     String nombreSmartPhone;
+     String sistemaOperativo;
+     String wifi;
+     String bluetooth;
+     String lectorHuella;
+     String camaraFrontal;
+     String memoriaInterna;
+     String memoriaExterna;
+     String memoriaRAM;
+
+    public SmartPhone(){
+
+    }
+
+    public SmartPhone(String nombreSmartPhone, String sistemaOperativo, String wifi, String bluetooth, String lectorHuella, String camaraFrontal, String memoriaInterna, String memoriaExterna, String memoriaRAM) {
+        this.nombreSmartPhone = nombreSmartPhone;
+        this.sistemaOperativo = sistemaOperativo;
+        this.wifi = wifi;
+        this.bluetooth = bluetooth;
+        this.lectorHuella = lectorHuella;
+        this.camaraFrontal = camaraFrontal;
+        this.memoriaInterna = memoriaInterna;
+        this.memoriaExterna = memoriaExterna;
+        this.memoriaRAM = memoriaRAM;
+    }
+}

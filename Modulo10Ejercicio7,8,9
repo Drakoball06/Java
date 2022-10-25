@@ -1,0 +1,121 @@
+package Interfaces;
+
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Vector;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Ejercicio 1 -----------------------");
+        System.out.println(reverse("Amor"));
+
+
+        System.out.println("Ejercicio 2 -----------------------");
+        String arrayUno[] = {"Bonjour","Bonsoir","Bienvenue","Au revoir"};
+
+        for(String i : arrayUno){
+            System.out.println(i);
+        }
+        System.out.println("Ejercicio 3 -----------------------");
+        int arrayDos[][] = {
+                {1,2,3,4},
+                {10,20,30,40}
+        };
+
+
+        for(int i = 0; i < arrayDos.length; i++){
+            for (int j = 0; j < arrayDos[i].length; j++){
+                System.out.println("Estoy en i = " + i + ",j = " + j);
+                System.out.println(arrayDos[i][j]);
+            }
+        }
+        System.out.println("Ejercicio 4 -----------------------");
+        Vector<String> vector = new Vector<>();
+        vector.add("HOLA");
+        vector.add("HELLO");
+        vector.add("BONJOUR");
+        vector.add("MERCI");
+        vector.add("MAISON");
+
+        vector.remove("HELLO");
+        vector.remove("BONJOUR");
+        System.out.println(vector);
+        System.out.println("Ejercicio 5 -----------------------");
+        System.out.println("Vector tamaño: " + vector.size() + " y capacidad: " + vector.capacity());
+        System.out.println("Si en caso tuvieramos 1000 datos entonces tendriamos" +
+                " 1010 ints de espacio de memoria pero a su vez duplicamos en memoria el consumo y eso sería malo");
+        System.out.println("Ejercicio 6 -----------------------");
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Hola");
+        arrayList.add("Adios");
+        arrayList.add("Carro");
+        arrayList.add("Robot");
+        String array1[] = new String[arrayList.size()];
+        for(int i=0;i<arrayList.size();i++){
+            array1[i] = arrayList.get(i);
+        }
+        for (String elemento : array1){
+            System.out.println("Elemento es: " + elemento);
+        }
+
+
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("Hola");
+        linkedList.add("Adios");
+        linkedList.add("Carro");
+        linkedList.add("Robot");
+
+        String array2[] = new String[linkedList.size()];
+        for(int i=0;i<linkedList.size();i++){
+            array2[i] = linkedList.get(i);
+        }
+        for (String elemento2 : array2){
+            System.out.println("Elemento es: " + elemento2);
+        }
+
+        System.out.println("Ejercicio 7 -----------------------");
+        ArrayList<Integer> arraycito = new ArrayList<Integer>();
+        int num = 10;
+        for(int i=0; i<num+1;i++){
+            arraycito.add(i);
+        }
+        for(int e: arraycito){
+            if(e%2!=0)
+                System.out.println("Elementos son: " + e);
+
+        }
+        System.out.println("Ejercicio 8 -----------------------");
+        try{
+            dividePorCero(4,0);
+            System.out.println("Demo del Código");
+        }catch (Exception e){
+            System.out.println("Esto no puede hacerse");
+        }
+
+        
+    }
+
+    //Ejercicio 1
+    public static String reverse(String texto){
+        String cadenaInvertida = "";
+        for(int x = texto.length()-1;  x>=0; x--){
+            cadenaInvertida =   cadenaInvertida +  texto.charAt(x) ;
+        }
+        return cadenaInvertida;
+    }
+
+    //Ejercicio 8 - método
+    public static double dividePorCero(int A, int B) throws ArithmeticException, IOException {
+        int resultado = 0;
+        try{
+            resultado = A / B;
+        }catch (ArithmeticException e){
+            throw new IOException();
+        }
+
+        return resultado;
+    }
+}
